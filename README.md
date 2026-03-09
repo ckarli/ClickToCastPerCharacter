@@ -1,4 +1,4 @@
-# ClickToCastPerCharacter
+# HoldToCastPerCharacter
 
 A World of Warcraft addon that saves and restores the "Hold to Cast" setting on a per-character basis.
 
@@ -12,7 +12,7 @@ A World of Warcraft addon that saves and restores the "Hold to Cast" setting on 
 ## Installation
 
 1. Download or clone this repository
-2. Copy the `ClickToCastPerCharacter` folder to your WoW addons directory:
+2. Copy the `HoldToCastPerCharacter` folder to your WoW addons directory:
    - **Retail**: `World of Warcraft/_retail_/Interface/AddOns/`
    - **Classic**: `World of Warcraft/_classic_/Interface/AddOns/`
 3. Restart WoW or reload your UI (`/reload`)
@@ -28,9 +28,9 @@ A World of Warcraft addon that saves and restores the "Hold to Cast" setting on 
 | `/ctc off` | Disable Hold to Cast for this character |
 | `/ctc toggle` | Toggle Hold to Cast setting |
 | `/ctc status` | Show current status |
-| `/ctc help` | Show all available commands |
+| `/htc` | Alternative command |
 
-Alternative slash commands: `/clicktocast`, `/holdtocast`
+Alternative slash commands: `/holdtocast`, `/htc`
 
 ## How It Works
 

@@ -1,0 +1,8 @@
+## Interface: 120000, 120001
+## Title: Hold To Cast Per Character
+## Notes: Saves and restores the Hold to Cast setting on a per-character basis.
+## Author: ckarli
+## Version: 1.0.0
+## SavedVariables: HoldToCastPerCharacterDB
+
+HoldToCastPerCharacter.lua
