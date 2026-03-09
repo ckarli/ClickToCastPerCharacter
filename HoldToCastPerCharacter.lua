@@ -1,4 +1,4 @@
--- ClickToCastPerCharacter
+-- HoldToCastPerCharacter
 -- Saves and restores the "Hold to Cast" setting on a per-character basis
 
 local addonName, addon = ...
@@ -31,8 +31,8 @@ local function SaveSetting()
     local key = GetCharacterKey()
     local enabled = GetHoldToCastSetting()
     
-    ClickToCastPerCharacterDB = ClickToCastPerCharacterDB or {}
-    ClickToCastPerCharacterDB[key] = enabled
+    HoldToCastPerCharacterDB = HoldToCastPerCharacterDB or {}
+    HoldToCastPerCharacterDB[key] = enabled
     
     return enabled
 end
@@ -41,8 +41,8 @@ end
 local function LoadSetting()
     local key = GetCharacterKey()
     
-    if ClickToCastPerCharacterDB and ClickToCastPerCharacterDB[key] ~= nil then
-        local savedSetting = ClickToCastPerCharacterDB[key]
+    if HoldToCastPerCharacterDB and HoldToCastPerCharacterDB[key] ~= nil then
+        local savedSetting = HoldToCastPerCharacterDB[key]
         SetHoldToCastSetting(savedSetting)
         return savedSetting, true
     end
@@ -63,7 +63,7 @@ end
 
 -- Print a message to chat
 local function PrintMessage(msg)
-    print("|cFF00FF00[ClickToCast]|r " .. msg)
+    print("|cFF00FF00[HoldToCast]|r " .. msg)
 end
 
 -- Print the current status
@@ -102,10 +102,10 @@ local function HandleSlashCommand(msg)
 end
 
 -- Register slash commands
-SLASH_CLICKTOCASTPERCHAR1 = "/ctc"
-SLASH_CLICKTOCASTPERCHAR2 = "/clicktocast"
-SLASH_CLICKTOCASTPERCHAR3 = "/holdtocast"
-SlashCmdList["CLICKTOCASTPERCHAR"] = HandleSlashCommand
+SLASH_HOLDTOCASTPERCHAR1 = "/ctc"
+SLASH_HOLDTOCASTPERCHAR2 = "/holdtocast"
+SLASH_HOLDTOCASTPERCHAR3 = "/htc"
+SlashCmdList["HOLDTOCASTPERCHAR"] = HandleSlashCommand
 
 -- Event handler
 frame:SetScript("OnEvent", function(self, event, ...)
